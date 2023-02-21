@@ -1,0 +1,804 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(images/medical.png);
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+    display:grid;
+    background-repeat: no-repeat;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    height:100%;
+}
+
+nav {
+    position:absolute;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+
+.one {
+    color:black;
+    border: 1px solid aliceblue;
+    font-size: 1.1rem;
+    padding: 24px;
+    background-color: aliceblue;
+    font-weight: bold;
+    transition: color 0.2s;
+    text-decoration: none;
+    border-radius: 4px;
+    transition:ease .40s;
+}
+
+#logo {
+    position: absolute;
+    width: calc(50px + 4vw);
+    left: 1.5rem;
+    top: 1.5rem;
+    z-index: 3;
+}
+
+nav ul {
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+    padding: 10px 25px;
+    z-index: 1;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.icon {
+    transition: color 0.2s;
+    text-decoration: none;
+    border-radius: 4px;
+    transition:ease .40s;
+}
+
+.icon:hover {
+    color: #04DACA;
+}
+
+.one:hover {
+    filter: brightness(50%);
+}
+h1 {
+    left: 1.5rem;
+    width: fit-content;
+    position: absolute;
+    bottom: 25%;
+    font-size: calc(1.8rem + 1.2vw);
+}
+
+.about-us {
+  position: absolute;
+  bottom: 14%;
+  left: 1.6rem;
+  color: black;
+  padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  /* display: inline-block; */
+  background: aliceblue;
+  border-radius: 4px;
+  transition: ease .40s;
+  font-size: 1rem;
+  z-index: 3;
+}
+
+.about-us:hover{
+    filter: brightness(50%);
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.hamburgMenu {
+    font-size: 4rem;
+    z-index: 2;
+}
+
+.toggle-button {
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+/*Next Section (Below Navbar)
+    */
+
+#section1 {
+    background:rgb(38, 52, 80);
+    height: 18rem;
+    display:inline-block;
+    width:100%;
+    text-align: center;
+    position: absolute;
+    bottom: -18rem;
+    line-height: 1.5;
+    /* margin: 4.5rem; */
+}
+
+#section1 h2 {
+    background:rgb(38, 52, 80);
+    width:100%;
+    font-size: 2.5em;
+    position: relative;
+    top: 3.6rem;
+}
+
+#section1 p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    background:rgb(38, 52, 80);
+    position: relative;
+    top:4.5rem;
+    font-size: calc(1rem + 0.5vw);
+    margin-top: -1.5rem;
+}
+
+
+@media screen and (max-width:730px)  {
+    
+     /* h1{
+        font-size: 2rem;
+        bottom: 40%;
+        right: 10%;
+        left: -10%;
+    }  */
+     /* .about-us{
+        position: absolute;
+        bottom: 30%;
+        left:-9%;
+
+    }  */
+     /* #section1{
+        top:564px;
+        line-height: normal;
+    } */
+    #section1 h2{
+        font-size:1.5rem;
+        
+    }
+    #section1 p{
+        font-size:1.1rem;
+        width: auto;
+        
+    } 
+}
+
+/*
+Section 2 Under V 
+*/
+#section2 {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    /* height:600px; */
+    flex-direction: column;
+    align-items: center;
+    bottom: -40rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    padding-right:30%;
+    
+    
+}
+
+#section2 h2{
+    position: relative;
+    font-size:3rem;
+    color:black;
+    
+}
+
+#section2 p{
+    position:relative;
+    font-size:1.3rem;
+    /* top:210px; */
+    color:black;
+    /* left:50%; */
+    line-height: 1.6;
+    /* bottom:auto; */
+    margin-bottom: 2.5rem;
+}
+.team {
+    position: relative;
+    margin-bottom: 5rem;
+    padding: 1.6rem 2rem 1.2rem 2.5rem;
+    /* top:250px;
+    left:50%; */
+    /* background:aliceblue; */
+    border-radius: 4px;
+    font-size:1.3rem;
+    background-color: rgb(38, 52, 80);
+}
+.hexagon {
+    position: absolute;
+    width: 35%;
+    padding-bottom: 30%;
+    clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
+    background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%, -35%);
+    object-fit: cover;
+  }
+
+@media only screen and (max-width: 768px) {
+    #section2 {
+        flex-direction: column;
+        padding-right: 0;
+        bottom: -40rem;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    #section2 h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #section2 p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .team {
+        padding: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    .hexagon{
+        display:none;
+    }
+    
+}
+@media screen and (min-width: 769px ) and (max-width:1366px){
+    .hexagon{
+        margin-right:200rem;
+    }
+    
+  }
+  @media screen and (min-width: 1920px) {
+    #section2{
+        position: absolute;
+        margin-bottom: -100px;
+        
+    }
+    #section2 h2{
+        font-size:4.3rem;
+
+    }
+    #section2 p{
+        font-size:1.5rem;
+        line-height:2
+    }
+   
+  }
+  
+
+
+ /*
+Card Section  
+*/
+
+.grid{
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    top:200%;
+    justify-content: center;
+    color: black;
+    align-items: start;
+    width:100%;
+    line-height: 1.6;
+
+
+}
+.grid-item{
+    width: calc(50% - 3.2rem);
+    background-color: #dbf5fc;
+    border-radius: 1rem;
+    overflow:hidden; 
+    transition:0.2s;
+    margin:1.6rem;
+    max-height: fit-content;
+    /* max-height: 50rem; */
+    width: 100%;
+}
+.grid-item:hover{
+    transform:translateY(-0.5%);
+
+}
+.card-img{
+    width:100%;
+    height:20rem;
+    object-fit: cover;
+}
+.card-content{
+    padding: 1rem;
+
+}
+.card-header{
+ font-size: 3rem;
+  font-weight:bolder;
+  color:#2F4858;
+  margin-bottom:1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+.card-text{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height:1.6;
+    margin-bottom: 2.5rem;
+    text-align: center;
+
+
+}
+.card-btn{
+    display:block;
+    width:100%;
+    padding:1.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color:#EAEAEA;
+    border:none;
+    border-radius: 0rem;
+    transition: 1   s;
+    cursor:pointer;
+    letter-spacing: 0.1rem;
+    background-color:#2C3E50;
+    margin-top: 1rem;
+    
+}
+.card-btn span{
+    margin-left: 1rem;
+    transition: 0.2s;
+    color: #CBC3E3;
+    
+    
+}
+.card-btn:active{
+    background-color: rgb(38, 52, 80);
+}
+.card-btn:hover span{
+    margin-left:1.2rem;
+
+}
+@media only screen and (max-width: 768px) {
+    .grid{
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+    .grid-item {
+        width:88%;
+        margin: 1rem;
+
+    }
+
+    .card-header {
+        font-size: 2rem;
+    }
+}
+
+
+/* below the grid section 
+*/
+
+.info2 {
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 135%;
+    color: black;
+    align-items: center;
+    margin-right:30%;
+    
+    
+  }
+  
+  .info2 img {
+    width:43%;
+    margin-left:10%;
+    height:430px;
+    
+  }
+
+  .side-text{
+    position: relative;
+    align-items: center;
+    margin-left:29%;
+    bottom: 27rem;
+    left:40%;
+    line-height: 1.6;
+
+
+   
+  }
+  
+  .side-text h2{
+    position: relative;
+    padding-top:20px;
+    font-size:2.8rem;
+
+  }
+  .side-text p{
+    padding:1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items:center;
+    width:80%;
+    
+  }
+  .new-btn{
+    position: absolute;
+    padding: 1.6rem 2rem 1.2rem 2.5rem;
+    border-radius: 3px;
+    font-size:1.3rem;
+    background-color: rgb(38, 52, 80);
+    left:1rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .info2 {
+      margin-top: 250rem;
+      margin-right: 1rem;
+
+      width:fit-content;
+    }
+  
+    .info2 img {
+        position: relative;
+      width: 90%;
+      height: auto;
+      right:10px;
+    }
+  
+    .side-text {
+      margin: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+    }
+  
+    .side-text h2 {
+      font-size: 2rem;
+    }
+  
+    .side-text p {
+        position: relative;
+      font-size: 1.2rem;
+      left:10%;
+    }
+  
+    .new-btn {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      margin-top: 2rem;
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: 769px ) and (max-width:1452px){
+    .info2 {
+        position: absolute;
+        margin-top: 140rem;
+      }
+    
+  }
+  @media screen and (min-width: 1920px){
+    .info2 img{
+        width:50%;
+        height:50%;
+        position: relative;
+        bottom:10rem;
+
+    }
+
+    .info2 h2{
+        font-size:4.3rem;
+    }
+    .info2 p{
+        font-size:1.5rem;
+    }
+    .side-text {
+        position: relative;
+        bottom:35rem;
+    }
+  }
+
+
+
+  /* Email Section*/ 
+  .section-separator{
+    width:100%;
+    
+  }
+    .left-text h2{
+        position: absolute;
+        bottom:2rem;
+        font-size:2.5rem;
+        line-height: 1.35;
+        width:80%;
+        left:12%;
+
+    }
+
+
+    .email-sect{
+        position: absolute;
+        left: 95%;
+        top:70%;
+
+    }
+    .email-sect p{
+        position: relative;
+        line-height: 1.4;
+        font-size: 1.6rem;
+        padding-bottom:2rem;
+        right:20rem;
+        max-width: 100%;
+
+    }
+    .email-input-container {
+        position: relative;
+        display: flex;
+        right:20rem;
+    }
+
+
+    #email-box{
+        display: inline-block;
+        width: 350px;
+        height: 60px;
+        outline: #C1C1C2;
+        outline-offset: -2px;
+        padding: 1.3rem;
+        margin:0.5rem;
+        font-size:1.3rem;
+    }
+
+    #email-btn{
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        height: 60px;
+        color: white;
+        background-color: rgb(38, 52, 80);
+        font-size: 1.2rem;
+        white-space: nowrap;
+        top: 0.4rem;
+        cursor: pointer;
+
+    }
+    #email-btn:hover{
+        transition: color 0.2s;
+        text-decoration: none;
+        transition:ease .40s;
+        filter: brightness(50%);
+    }
+
+    @media (max-width: 767px) { /*phone media query*/
+        .left-text h2 {
+          position: static;
+          font-size: 2rem;
+          line-height: 1.3;
+          width: 100%;
+          left: 0;
+          text-align: center;
+        }
+      
+        .email-sect {
+          position: static;
+          margin-top: 2rem;
+          text-align: center;
+        }
+      
+        .email-sect p {
+          position: static;
+          line-height: 1.4;
+          font-size: 1.2rem;
+          padding-bottom: 1rem;
+          white-space: normal;
+        }
+      
+        .email-input-container {
+          position: static;
+          display: block;
+          margin: 0 auto;
+        }
+      
+        #email-box {
+          display: block;
+          width: 98%;
+          height: 3rem;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+        }
+      
+        #email-btn {
+          position: static;
+          display: block;
+          width: 100%;
+          height: 3rem;
+          font-size: 1rem;
+          margin: 0 auto;
+          margin-top: 1rem;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1452px) {
+        .left-text h2 {
+          font-size: 2rem;
+        }
+      
+        .email-sect {
+          max-width: 95%;
+          left: 90%;
+          top: 75%;
+        }
+      
+        .email-sect p {
+             max-width: 100%;
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          right: 20%;
+        }
+      
+        #email-box {
+         position: relative;
+          width: 300px;
+          height: 50px;
+          font-size: 1.1rem;
+          left:40%;
+        }
+      
+        #email-btn {
+        position: relative;
+          width: 120px;
+          height: 50px;
+          left:40%;
+          
+        }
+      }
+      @media screen and (min-width: 1920px) {
+       .left-text h2{
+        font-size:3.4rem;
+        top:50%;
+
+       }
+       .email-sect{
+        top:60%;
+       }
+
+
+
+      }
+
+/* Footer section */
+.footer{
+    position: absolute;
+    top:50rem;
+    background-color: #24262b;
+    width: 98.5vw;
+    padding: 70px;
+    margin: auto;
+    line-height: 1.6;
+}
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+
+.footer-col h3{
+    position: relative;
+    font-weight: bold;
+    left:120%;
+    color: #ffff;
+
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    
+
+}
+.footer-col h4{
+    position: relative;
+    font-size:2rem;
+    color:#ffff;
+    margin-bottom: 1rem ;
+    font-weight: 500;
+    top:3rem;
+    content: '';
+    left:50%;
+
+
+    
+}
+.footer-col ul{
+    position: relative;
+    right:-120%;
+
+
+}
+.footer-col ul li a{
+    font-size:2rem;
+    color:#ffff;
+    text-decoration: none;
+    display:block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+    padding-left: 0.8rem;;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        position: relative;
+        top:0;
+        max-width: 100vw;
+
+    }
+    .rows{
+        justify-content: space-between;
+    }
+    .footer-col{
+        font-size: 1rem;
+        width: 10%;
+    }
+    .footer-col h3 {
+        position: relative;
+        font-size: 1.5rem;
+        text-align: center;
+        margin:0;
+
+        
+      }
+      .footer-col h4 {
+        position: relative;
+        font-size: 1.1rem;
+        margin-left: -5rem; 
+        white-space: wrap;
+        
+      }
+      .footer-col ul li a {
+        font-size: 1.2rem;
+      }
+}
