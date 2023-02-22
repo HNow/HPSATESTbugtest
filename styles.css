@@ -473,9 +473,8 @@ Card Section
   
   @media only screen and (max-width: 768px) {
     .info2 {
-      margin-top: 250rem;
+      margin-top: 235rem;
       margin-right: 1rem;
-
       width:fit-content;
     }
   
@@ -661,20 +660,21 @@ Card Section
       }
       @media screen and (min-width: 768px) and (max-width: 1452px) {
         .left-text h2 {
+          padding-bottom:14%;
           font-size: 2rem;
         }
       
         .email-sect {
           max-width: 95%;
           left: 90%;
-          top: 75%;
+          top: 68.5%;
         }
       
         .email-sect p {
-             max-width: 100%;
+          max-width: 100%;
           font-size: 1.4rem;
           padding-bottom: 1rem;
-          right: 20%;
+          right: 33%;
         }
       
         #email-box {
