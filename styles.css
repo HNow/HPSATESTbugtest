@@ -248,7 +248,7 @@ Section 2 Under V
     background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
     background-size: cover;
     top: 50%;
-    left: 50%;
+    left: 50vw;
     transform: translate(20%, -35%);
     object-fit: cover;
   }
@@ -304,12 +304,118 @@ Section 2 Under V
     }
    
   }
-  
+  /* Card */
 
+  .card-container{
+    position: fixed;
+    width:100%;
+    margin:50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    top: 190vh;
+    box-sizing: border-box;
+
+    
+}
+.cards{
+    background-color:#dbf5fc;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: auto 1fr;
+    border-radius: 18px;
+    transition: 0.3s;
+    
+
+}
+.cards:hover{
+    transform: translateY(-0.5%);
+    
+}
+.card-image{
+    border-radius: 18px;
+    height: 26rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    
+    
+}
+.card-image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-text{
+    color:black;
+    padding:20px 10px;
+    text-align: center;
+    font-size:1.3rem;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
+}
+.card-btn{
+    position: relative;
+    width:100%;
+    padding:1.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color:#EAEAEA;
+    border:none;
+    border-radius: 0rem;
+    transition: 0.2s;
+    cursor:pointer;
+    letter-spacing: 0.1rem;
+    background-color:#2C3E50;
+    margin-top: 1rem;
+    
+}
+.card-btn span{
+    margin-left: 1rem;
+    transition: 0.2s;
+    color: #CBC3E3;
+    
+    
+}
+.card-btn:active{
+    background-color: rgb(38, 52, 80);
+}
+.card-btn:hover span{
+    margin-left:1.5rem;
+
+}
+@media only screen and (max-width: 768px) {
+    .card-container{
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+    .cards{
+        width:100%;
+
+    }
+    
+
+    .card-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+      width:100vw;
+    }
+  }
+
+  
 
  /*
 Card Section  
-*/
+
 
 .grid{
     background-color: #fff;
@@ -332,7 +438,7 @@ Card Section
     transition:0.2s;
     margin:1.6rem;
     max-height: fit-content;
-    /* max-height: 50rem; */
+    /* max-height: 50rem; 
     width: 100%;
 }
 .grid-item:hover{
@@ -367,53 +473,24 @@ Card Section
 
 
 }
-.card-btn{
-    display:block;
-    width:100%;
-    padding:1.3rem;
-    font-size: 1.2rem;
-    text-align: center;
-    color:#EAEAEA;
-    border:none;
-    border-radius: 0rem;
-    transition: 1   s;
-    cursor:pointer;
-    letter-spacing: 0.1rem;
-    background-color:#2C3E50;
-    margin-top: 1rem;
-    
-}
-.card-btn span{
-    margin-left: 1rem;
-    transition: 0.2s;
-    color: #CBC3E3;
-    
-    
-}
-.card-btn:active{
-    background-color: rgb(38, 52, 80);
-}
-.card-btn:hover span{
-    margin-left:1.2rem;
 
-}
 @media only screen and (max-width: 768px) {
-    .grid{
+    .card-container{
         display:flex;
         flex-wrap: wrap;
 
     }
-    .grid-item {
+    .cards{
         width:88%;
         margin: 1rem;
 
     }
 
-    .card-header {
+    .card-text {
         font-size: 2rem;
     }
 }
-
+*/
 
 /* below the grid section 
 */
