@@ -662,47 +662,7 @@ Card Section
           margin-top: 1rem;
         }
       }
-      @media screen and (min-width: 768px) and (max-width: 1452px) {
-        .left-text h2 {
-         position: absolute;
-          font-size: 2.5rem;
-          top:59vh;
-          left:8vw;
-        }
-      
 
-        .email-sect p {
-          font-size: 1.4rem;
-          padding-bottom: 1rem;
-          right: 25vh;
-        }
-      
-        #email-box {
-         position: relative;
-          width: 300px;
-          height: 50px;
-          font-size: 1.1rem;
-          left:10vw;
-        }
-      
-        #email-btn {
-        position: relative;
-          width: 120px;
-          height: 50px;
-          left:10vw;
-          
-        }
-      }
-      @media screen and (min-width: 1920px) {
-       .left-text h2{
-        font-size:3.4rem;
-        top:45vh;
-
-       }
-       .email-sect{
-        top:60vh;
-       }
-      }
 
 /* Footer section */
 .footer{
