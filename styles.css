@@ -15,6 +15,7 @@ body {
     display:grid;
     background-repeat: no-repeat;
     overflow-x: hidden;
+
     
 }
 
@@ -311,7 +312,7 @@ Card Section
 
 .card-container{
     position: fixed;
-    width:100%;
+    max-width:100%;
     margin:50px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -330,10 +331,14 @@ Card Section
     border-radius: 18px;
     transition: 0.3s;
     
+    
+    
 
 }
 .cards:hover{
     transform: translateY(-0.5%);
+
+
     
 }
 .card-image{
@@ -353,12 +358,20 @@ Card Section
     object-fit: cover;
 }
 .card-text{
+    font-weight: normal;
+    font-family: 'Times New Roman', Serif;
     color:black;
-    padding:20px 10px;
     text-align: center;
-    font-size:1.3rem;
+    font-size:1.2rem;
     line-height: 1.6;
     letter-spacing: 0.1rem;
+    display: flex; 
+    flex-direction: column; 
+
+
+}
+.card-text h2{
+    max-height: fit-content;
 }
 .card-btn{
     position: relative;
@@ -373,7 +386,7 @@ Card Section
     cursor:pointer;
     letter-spacing: 0.1rem;
     background-color:#2C3E50;
-    margin-top: 1rem;
+    margin-top: auto; 
     
 }
 .card-btn span{
@@ -409,22 +422,29 @@ Card Section
 
 @media screen and (max-width: 1024px) {
     .card-container {
-      grid-template-columns: repeat(2, 1fr);
       width:100vw;
     }
   }
 
+  
+
+
+
+
+
+
 /* below the grid section 
-*/
+
+
 
 .info2 {
     font-size: 2rem;
     position: absolute;
-    /* margin-top: 0rem; */
+  
     color: black;
     align-items: center;
     margin-right:30%;
-    /* background-color: #04DACA; */
+    
     top:130vw;
     
   }
@@ -472,7 +492,7 @@ Card Section
     left:1rem;
   }
   
-  @media only screen and (max-width: 768px) { /*Phone Media query*/
+  @media only screen and (max-width: 768px) { /*Phone Media query
     .info2 {
         position: absolute;
         top:580vh !important;
@@ -513,37 +533,169 @@ Card Section
     }
   }
 
-  @media screen and (min-width: 769px ) and (max-width:1452px){ /*Laptop media query */
-    .info2 {
-        position: absolute;
-        top:180vw;
-      }
+  
+  */
+  
+  /*@media screen and (max-width: 1024px) {
+    . {
+      grid-template-columns: repeat(2, 1fr);
+      width:100vw;
+      REMEMBER TO ADD THIS TO THIS SECTION SO IT ADJUSTS TO THE 2X2
+    }
+  }
+*/
+  .info2-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top:275vh;
+    margin-left: 9rem;
+    max-width: 100vw;
+    
+
+   
+
+
+  }
+  
+  .info-image img {
+    position: relative;
+    max-width: 50vw;
+    max-height: 52vh;
+
+    
     
   }
-  @media screen and (min-width: 1920px){
-    .info2 img{
-        width:50%;
-        height:50%;
-        position: relative;
-        bottom:10rem;
+  
+  .side-info {
+    color: black;
+  }
+  .content{
+    margin: 6em;
+    width:80vh;
 
-    }
 
-    .info2 h2{
-        font-size:3.8rem;
-    }
-    .info2 p{
-        font-size:1.5rem;
-    }
-    .side-text {
-        position: relative;
-        bottom:35rem;
-    }
+
+  }
+  .content h2{
+    position: relative;
+    font-size: 4.5rem;
+    bottom:3rem;
+    white-space: nowrap;
+   
+
+
+  }
+  .content p{
+    display: flex;
+    font-size:1.7rem;
+    line-height: 1.6;
+    width:90%;
+    padding: 1rem;
   }
 
   
+  .new-btn {
+    position: relative;
+    top:3rem;
+    padding: 1.6em 2em 1.2em 2.5em;
+    border-radius: 3px;
+    font-size:1.3rem;
+    background-color: rgb(38, 52, 80);
+    
+    
+  }
 
+  @media only screen and (min-width: 1024px) and (max-width: 1366px) { /* Laptop media query*/
+    .info2-container {
+        max-width: 100vw;
+        margin-left: 2rem;
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+      .info-image img{
+        top:10rem;
+      }
+      .content {
+        text-align: justify;
+        position: absolute;
+        max-width: 80vw;
+        margin: 2em;
+        width:auto;
+        max-width:100%;
+      }
+    
+      .content h2 {
+        font-size: 2.5rem;
+      }
+    
+      .content p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        width: auto;
+        padding: 1rem;
+        
+      }
+    
+      .new-btn {
+        position: relative;
+        padding: 1.54em 1.5em;
+        font-size: 1rem;
+        top:1.5rem;
+        left:1em;
+      }
+    }
+    @media only screen and (max-width: 768px) { /*Mobile Media query */
+        .info2-container {
+          position: absolute;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          padding: 2rem;
+          top:520vh;
+          
+        }
+        
+        .info-image img {
+          max-width: 80vw;
+          max-height: auto;
+          margin-bottom: 4rem;
+        }
+        
+        .content {
+          width: 100vw;
+          text-align: center;
+          margin: 0;
+          font-size: 1.3rem;
 
+          
+        }
+        
+        .content h2 {
+          display: inline;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        
+        .content p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          padding: 0.5rem;
+        }
+        
+        .new-btn {
+
+            position: relative;
+            display: block;
+           
+        }
+      }
+
+    
+     
 
   /* Email Section*/ 
   .section-separator{
