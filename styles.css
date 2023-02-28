@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -305,13 +308,6 @@ Section 2 Under V
         display:none;
     }
 }
-
-@media screen and (min-width: 769px ) and (max-width:1366px){
-    .hexagon{
-        /* margin-right:200rem; */
-    }
-    
-  }
  
   
 
@@ -344,7 +340,7 @@ Card Section
     justify-content: space-between;
     grid-template-rows: auto 1fr;
     border-radius: 18px;
-    transition: 0.3s;
+    transition: 0.1s ease;
     
     
     
@@ -419,20 +415,10 @@ Card Section
 
 }
 @media only screen and (max-width: 768px) {
-    .card-container{
-        display:flex;
-        flex-wrap: wrap;
-
-    }
-    .cards{
-        width:100%;
-
-    }
-    
-
-    .card-text {
-        font-size: 1.2rem;
-    }
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 25px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -499,8 +485,8 @@ Card Section
     display: flex;
     font-size:1.7rem;
     line-height: 1.6;
-    width:90%;
-    padding: 1rem;
+    width:100%;
+    padding: 0.5rem;
   }
 
   
