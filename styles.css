@@ -6,18 +6,21 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    
 }
 
 body {
-    height: 100vh;
-    width: 100;
-    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(images/medical.png);
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient(to bottom, #8B00FF, #4B0082);
     background-size: cover;
     background-position: center;
     color: aliceblue;
     display:grid;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    
 
     
 }
@@ -151,6 +154,7 @@ a {
     top:90vh;
     line-height: 1.4;
     min-height: 100px;
+    overflow-x: hidden;
    
 
 }
@@ -175,24 +179,17 @@ a {
 }
 
 
-@media screen and (max-width:730px)  {
+@media screen and (max-width:768px)  {
+  .about-us {
+  
     
-     /* h1{
-        font-size: 2rem;
-        bottom: 40%;
-        right: 10%;
-        left: -10%;
-    }  */
-     /* .about-us{
-        position: absolute;
-        bottom: 30%;
-        left:-9%;
-
-    }  */
-     /* #section1{
-        top:564px;
-        line-height: normal;
-    } */
+    position: relative;
+    bottom: -38rem;
+    
+  }
+  
+    
+  
     #section1 h2{
         font-size:1.5rem;
         
@@ -209,17 +206,13 @@ Section 2 Under V
 */
 #section2 {
     width: 100%;
-    /* display: flex; */
-    /* justify-content: space-around; */
     position: relative;
-    /* height:600px; */
     flex-direction: column;
     align-items: center;
     bottom: -90%;
     margin: 0 auto;
     padding: 3rem 0;
     padding-right:30vw;
-    /* background-color:#04DACA; */
     min-height:20px;
     min-width: 200px;
    
@@ -261,12 +254,12 @@ Section 2 Under V
 }
 .hexagon {
   position: absolute;
-  width: 28vw; /* adjust the width to fit the screen */
-  height: 20vw; /* adjust the height proportionally */
+  width: 28vw; 
+  height: 20vw; 
   clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
   background-size: cover;
   top:60%;
-  left: 80%; /* adjust the right value to move the element to the desired position */
+  left: 80%; 
   transform: translate(-50%, -50%);
   object-fit: cover;
   display: flex;
@@ -278,6 +271,7 @@ Section 2 Under V
   @media only screen and (max-width: 767px) {
     #section2{
       max-width: 100vw;
+      background-size: contain;
     }
     #section2 h2{
         top:12vh;
@@ -596,7 +590,7 @@ Card Section
               border-radius: 3px;
               font-size: 1.3rem;
               background-color: rgb(38, 52, 80);
-            margin: 0.5em 0;
+              margin: 0.5em 0;
             
            
         }
