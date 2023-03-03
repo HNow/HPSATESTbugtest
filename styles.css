@@ -94,7 +94,7 @@ nav ul li a {
 }
 .container{
   min-height: 50px;
-  overflow: hidden;
+  overflow-x: clip;
 
 }
 h1 {
@@ -184,7 +184,7 @@ a {
   
     
     position: relative;
-    bottom: -38rem;
+    bottom: -80%;
     
   }
   
