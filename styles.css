@@ -13,7 +13,7 @@ body {
     height: 100%;
     width: 100%;
 
-    background: linear-gradient(to bottom, #8B00FF, #4B0082);
+    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(images/medical.png);
     background-size: cover;
     background-position: center;
     color: aliceblue;
@@ -94,7 +94,7 @@ nav ul li a {
 }
 .container{
   min-height: 50px;
-  overflow-x: clip;
+  overflow: hidden;
 
 }
 h1 {
